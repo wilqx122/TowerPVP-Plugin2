@@ -1,0 +1,104 @@
+# Główna konfiguracja TowerPVP
+game-settings:
+  solo-max-players: 8
+  min-players-to-start: 2
+  game-duration-minutes: 8
+  countdown-seconds: 30
+  lobby-world-name: "world"
+
+rewards:
+  win-money: 100.0
+  kill-money: 10.0
+
+sounds:
+  countdown-tick: "BLOCK_NOTE_BLOCK_PLING"
+  game-start: "ENTITY_ENDER_DRAGON_GROWL"
+  player-kill: "ENTITY_EXPERIENCE_ORB_PICKUP"
+
+gui:
+  arena-selector:
+    title: "&1Wybierz Tryb Gry"
+    items:
+      '1vs1':
+        material: "GREEN_SHULKER_BOX"
+        name: "&a&l1vs1"
+        enchanted: false
+        lore:
+          - "&7Dostępne Areny: &f{amount}"
+          - ""
+          - "&eKliknij, aby dołączyć!"
+      solo:
+        material: "RED_SHULKER_BOX"
+        name: "&c&lSolo"
+        enchanted: false
+        lore:
+          - "&7Dostępne Areny: &f{amount}"
+          - ""
+          - "&eKliknij, aby dołączyć!"
+  shop-entry:
+    title: "&2&lSklep"
+    item:
+      material: "NETHERITE_SWORD"
+      name: "&b&lKlasy"
+      enchanted: true
+      lore:
+        - "&7Kliknij, aby przejrzeć i zakupić"
+        - "&7ulepszenia dla Twojej postaci."
+  class-shop:
+    title: "&3&lSklep z Klasami"
+    purchased-item-enchanted: true
+  ranking-gui:
+    title: "&6&lRanking Serwera"
+    headers:
+      kills:
+        material: "DIAMOND_SWORD"
+        name: "&c&lTOP 10 ZABÓJSTW"
+      wins:
+        material: "EMERALD"
+        name: "&a&lTOP 10 WYGRANYCH"
+      money:
+        material: "GOLD_INGOT"
+        name: "&e&lTOP 10 NAJBOGATSZYCH"
+
+reward-multipliers:
+  vip:
+    permission: "towerpvp.rank.vip"
+    multiplier: 1.5
+  svip:
+    permission: "towerpvp.rank.svip"
+    multiplier: 2.0
+  sponsor:
+    permission: "towerpvp.rank.sponsor"
+    multiplier: 2.5
+
+classes:
+  warrior:
+    price: 500
+    material: "DIAMOND_SWORD"
+    display-name: "&c&lWojownik"
+    lore:
+      - "&7Potężny wojownik walczący w zwarciu."
+      - "&7Idealny dla agresywnych graczy."
+    items:
+      - "diamond_sword{Enchantments:[{id:\"sharpness\",lvl:1}]}"
+      - "shield"
+      - "iron_helmet"
+      - "iron_chestplate"
+      - "iron_leggings"
+      - "iron_boots"
+  archer:
+    price: 450
+    material: "BOW"
+    display-name: "&a&lŁucznik"
+    lore:
+      - "&7Zwinny strzelec eliminujący wrogów z dystansu."
+      - "&7Wymaga precyzji i dobrego pozycjonowania."
+    items:
+      - "bow{Enchantments:[{id:\"power\",lvl:1}]}"
+      - "arrow 64"
+      - "leather_helmet"
+      - "leather_chestplate"
+      - "leather_leggings"
+      - "leather_boots"
+
+lobby-spawn-location: {}

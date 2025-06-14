@@ -1,0 +1,23 @@
+name: TowerPVP
+version: 1.0.0
+main: pl.twojanazwa.towerpvp.TowerPVP
+api-version: '1.20'
+author: TwojaNazwa
+description: Minigra PVP na wieżach.
+softdepend: [MultiVerse-Core, Vault]
+
+commands:
+  towerpvpadmin:
+    description: Główne komendy administracyjne dla TowerPVP.
+    aliases: [tpvp, pvpadmin]
+    permission: towerpvp.admin
+  opusc:
+    description: Pozwala opuścić arenę po śmierci.
+    aliases: [leave]
+  setlobby:
+    description: Ustawia główny punkt spawnu dla lobby.
+    permission: towerpvp.admin
+  tpreload:
+    description: Przeładowuje konfigurację pluginu TowerPVP.
+    aliases: [towerpvpreload]
+    permission: towerpvp.admin
