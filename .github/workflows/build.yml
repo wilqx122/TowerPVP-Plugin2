@@ -7,17 +7,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      # ZMIANA: Wersja v3 -> v4
+      - uses: actions/checkout@v4
+      
+      # ZMIANA: Wersja v3 -> v4
       - name: Set up JDK 8
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '8'
           distribution: 'temurin'
+          
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
+      # ZMIANA: Wersja v3 -> v4
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TowerPVP-Plugin
           path: target/TowerPVP-1.0.0.jar
