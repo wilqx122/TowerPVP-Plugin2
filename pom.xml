@@ -54,6 +54,10 @@
 
     <repositories>
         <repository>
+            <id>project-local-repo</id>
+            <url>file://${project.basedir}/repo</url>
+        </repository>
+        <repository>
             <id>papermc-repo</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
@@ -71,16 +75,14 @@
             <groupId>com.onarandombox.multiversecore</groupId>
             <artifactId>MultiVerse-Core</artifactId>
             <version>4.3.12</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/MultiVerse-Core.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>1.7.1</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/Vault.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
